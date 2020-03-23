@@ -1,4 +1,4 @@
-name: "Sputnik"
+name: "Sputnik-action"
 description: "Don't waste your build time and trigger your Bitrise workflow only when needed."
 author: "labarak"
 inputs:
