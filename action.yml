@@ -1,0 +1,29 @@
+name: "Sputnik"
+description: "Don't waste your build time and trigger your Bitrise workflow only when needed."
+author: "labarak"
+inputs:
+  bitrise_app_slug:
+    description: "You Bitrise app ID"
+    required: true
+  bitrise_build_trigger_token:
+    description: "This is your app Build Trigger token"
+    required: true
+  bitrise_workflow:
+    description: "The name of the workflow you want to trigger"
+    required: true
+  github_token:
+    description: "Your github access token, ie: secrets.GITHUB_TOKEN"
+    required: true
+  trigger_on:
+    description: "Optional params to select which trigger to use. Can be 'all' | 'command' -- default is 'all'"
+    required: false
+  command_alias:
+    description: "Alias to use instead of the workflow name when using the command"
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
+
+branding:
+  icon: "send"
+  color: "gray-dark"
